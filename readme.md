@@ -1,10 +1,10 @@
+# Docker bootstrap
+
 Bootstrap de mes sites fonctionnant avec Docker
 
-
-Si vous n'avez pas de reserve-proxy, installer d'abord le conteneur dispo ici : https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
+Si vous n'avez pas de reverse-proxy, installer d'abord le conteneur dispo ici : https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
 
 Et vous pouvez suivre ce superbe tuto : https://gasbayet.fr/blog/2018/02/06/docker-compose-wordpress-tutoriel-debutant.html
-
 
 ```shell
 git clone https://github.com/babeuloula/sites-docker-bootstrap your_website
@@ -15,7 +15,8 @@ Editez la configuration apache si besoin : `datas/conf/000-default.conf`
 Editez le fichier `.env` et mettez vos propre infos
 
 ```shell
-docker-compose up -d
+chmod +x start.sh
+./start.sh
 ```
 
 ## PhpMyAdmin
