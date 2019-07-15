@@ -17,7 +17,8 @@ services:
      depends_on:
        - db
      container_name: ${CONTAINER_NAME}
-     image: babeuloula/ubuntu-apache2-php7:latest
+     build:
+       context: ./docker/
      restart: unless-stopped
      volumes:
        - ${CORE_PATH}:/var/www/html
